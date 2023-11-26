@@ -1,0 +1,35 @@
+const objeto = {
+  id: 1,
+  OS: "18414124",
+  ABERTURA_OS: "18/08/2023 15:15:14",
+  ATRIBUICAO_OS: "18/08/2023 15:17:57",
+  PIB: "32123649",
+  EQUIPAMENTO: "SCANNER POLICROMATICO",
+  N_SERIE: "JAC01063                 ",
+  MCU: "    AT320029",
+  ORGAO: "RESERVA TECNICA - PE",
+  DR: "32",
+  DR_SIGLA: "PE ",
+  VALUE2: "000769_2023_001",
+  SX_CONTRATO: "000769_2023_001 - ECSTEC                                  ",
+  DESCRICAO_TOTAL:
+    "Manutenção Solicitada: Scanner de Mesa  PIB: 32123649 Nome: SCANNER POLICROMATICO          Modelo: DR-C230 / CANON                Marca: CANON                          Descreva a manutenção: SCANNER/CANON CTR 769/2023 -  NÃO LIGA.  PIB.32123649  -  SÉRIE:JAC01063I  ENVIAR PARA O ERP Telefone de contato: ALFREDO - (81) 2101.6642   MASIEL 2101.6670 Local de atendimento: PE/CESTI/GESTI/SLTI - AV. GUARARAPES, 250 3º ANDAR STO ANTONIO RECIFE/PE - CEP 50010-900 Informe a localidade para atendimento desta solicitação: SE/PE",
+  DESCRICAO_LONGA_TOTAL:
+    "Manutenção Solicitada: Scanner de Mesa  PIB: 32123649 Nome: SCANNER POLICROMATICO          Modelo: DR-C230 / CANON                Marca: CANON                          Descreva a manutenção: SCANNER/CANON CTR 769/2023 -  NÃO LIGA.  PIB.32123649  -  SÉRIE:JAC01063I  ENVIAR PARA O ERP Telefone de contato: ALFREDO - (81) 2101.6642   MASIEL 2101.6670 Local de atendimento: PE/CESTI/GESTI/SLTI - AV. GUARARAPES, 250 3º ANDAR STO ANTONIO RECIFE/PE - CEP 50010-900 Informe a localidade para atendimento desta solicitação: SE/PE; 24/08/2023 16:18:13 INFO. ADIC.: CHAMADO FECHADO - INSERIDO DATA DE FIM DE SERVIÇO (MU): 21/08/2023 11:32:00; SOLUÇÃO DO CHAMADO: Troca do equipamento através de logística reversa.. (JÉSSICA LIMA DA SILVA LARA); 24/08/2023 16:18:13 Utilização de serviços e peças: . (JÉSSICA LIMA DA SILVA LARA)",
+  DESCRICAO: "Manutenção Solicitada: Scanner de Mesa  PIB: 3212364...",
+  SOLUCAO: "Troca do equipamento através de logística reversa.",
+  TECNICO: null,
+  NOME_TECNICO: null,
+  SLA: 2,
+  FECHAMENTO_OS: "21/08/2023 11:33:00",
+  ATRASO: "0",
+  ESTADO: "ATESTADO",
+  cae_qt_reabertura: 0,
+  cae_tx_data_reabertura: null,
+  CIDADE: "RECIFE                   ",
+  AREA_CLASSIFICACAO: "PP",
+  TP_ATENDIMENTO: "L",
+  LIMITE_SLA: null,
+}
+const array = Object.values(objeto)
+console.log(array)
