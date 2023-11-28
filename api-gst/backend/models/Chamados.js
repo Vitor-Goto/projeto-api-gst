@@ -38,6 +38,7 @@ const chamadosSchema = new Schema(
 )
 
 const Chamado = mongoose.model("Chamado", chamadosSchema)
+// Chamado.createIndexes()
 
 module.exports = {
   Chamado,

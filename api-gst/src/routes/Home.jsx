@@ -25,18 +25,21 @@ const Home = () => {
     getChamados()
   }, [])
 
+  const chamadosNaoAtestados = chamados.filter(
+    (chamado) => chamado.ESTADO !== "ATESTADO"
+  )
   return (
     <div className="home">
       <h1>Ultimos Chamados</h1>
-      {chamados.length === 0 ? (
-        <p>Carregando...</p>
+      {chamadosNaoAtestados.length === 0 ? (
+        <p>Nenhum chamado disponível</p>
       ) : (
-        chamados.map((chamado) => (
+        chamadosNaoAtestados.map((chamado) => (
           <div className="chamado" key={chamado.OS}>
             <h2>{chamado.OS}</h2>
             <h2>{chamado.DESCRICAO_TOTAL}</h2>
             <Link to={`api/chamados/${chamado.OS}`} className="btn">
-              Ler mais
+              Tratar Chamado
             </Link>
           </div>
         ))

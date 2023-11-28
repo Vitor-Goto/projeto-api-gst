@@ -10,11 +10,11 @@ const Navbar = () => {
       </h2>
       <ul>
         <li>
-          <Link to={"/"}>Home</Link>
+          <Link to={"/"}>Inicio</Link>
         </li>
         <li>
           <Link to={"/new"} className="new-btn">
-            Novo Post
+            Atribuir chamado
           </Link>
         </li>
       </ul>
