@@ -26,7 +26,7 @@ const Home = () => {
   }, [])
 
   const chamadosNaoAtestados = chamados.filter(
-    (chamado) => chamado.ESTADO !== "ATESTADO"
+    (chamado) => chamado.ESTADO === "ATESTADO"
   )
   return (
     <div className="home">
