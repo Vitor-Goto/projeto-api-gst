@@ -3,7 +3,7 @@ import https from "https"
 import { CronJob } from "cron"
 
 const headers = {
-  key: "ea9fed07a4cfa14a47889ff7a855b12b81fe2523f94bbaf2445bca1f5d9186f1",
+  Key: "ea9fed07a4cfa14a47889ff7a855b12b81fe2523f94bbaf2445bca1f5d9186f1",
   "Content-Type": "application/json",
 }
 // const correiosApiUrl = "https://jsonplaceholder.typicode.com/posts"
@@ -16,7 +16,7 @@ const getCorreiosData = async () => {
       headers: headers,
       httpsAgent: new https.Agent({ rejectUnauthorized: false }),
     })
-    console.log(typeof response)
+    console.log(response.data)
     // console.log(typeof response, typeof response.data)
     // await axios.post(dbUrl, response.data)
     // console.log("Dados enviados para o JSON Server:", response.data)
@@ -24,8 +24,4 @@ const getCorreiosData = async () => {
     console.error("Erro ao acessar a API dos Correios:", error.message)
   }
 }
-
-const job = new CronJob("* * * * * *", () => {
-  getCorreiosData()
-})
-job.start()
+getCorreiosData()
