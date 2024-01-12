@@ -1,0 +1,69 @@
+{
+  "login": {
+    "Base": "NETSCAN",
+    "Usuario": "whatsapp",
+    "Senha": "whatsapp"
+  },
+  "assistec": {
+    "Codigo": null,
+    "CodigoFilial": "6",
+    "NumeroAssistencia": null,
+    "CodigoCliente": "#codigoCliente",
+    "CPF_CNPJ_Cliente": "#CPF-CNPJ",
+    "RazaoSocialCliente": "#razaoSocial",
+    "DadosClienteAssistencia": null,
+    "DataAbertura": null,
+    "HoraAbertura": null,
+    "CodigoSituacao": "1",
+    "NomeSituacao": null,
+    "TipoRegistro": null,
+    "Equipamentos": [
+      {
+        "CodigoEquipamento": "#codigoEquip",
+        "TipoEquipamento": 1,
+        "NrSerie": "#numSerie",
+        "EquipamentoProdutoAssistenciaDefeito": {
+          "DefeitoRelatado": "#defeitoRelatado"
+        }
+      }
+    ],
+    "Complemento": {
+      "Tecnicos": [
+        {
+          "Codigo": "156"
+        }
+      ]
+    },
+    "LocalizacaoEquipamento": {
+      "CEP": "#cep",
+      "Endereco": "#endereco",
+      "NumeroEndereco": "#numEndereco",
+      "Complemento": "#complemento",
+      "Bairro": "#bairro",
+      "CodigoCidade": null,
+      "CodigoIBGECidade": null,
+      "Cidade": null,
+      "UF": null,
+      "Contato": "#nomeContato",
+      "Comentario": null,
+      "DDD": null,
+      "Telefone": "#telefoneContato",
+      "Email": "#emailContato"
+    },
+    "Recados": [
+      {
+        "CodigoRecado": null,
+        "Data": null,
+        "Hora": null,
+        "CodigoUsuario": null,
+        "NomeUsuario": null,
+        "Contato": "#nomeContato",
+        "Telefone": "#telefoneContato",
+        "RecadoAssistenciaTecnica": "#comentario",
+        "Email": "#emailContato"
+      }
+    ],
+    "Atendimentos": null,
+    "InformacoesAdicionais": null
+  }
+}
