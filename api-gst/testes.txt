@@ -1,12 +1,4 @@
-import axios from "axios"
-import https from "https"
-import get from "./getChamados.js"
-
-const headersWkRadar = {}
-const radarWkapiUrl = "a"
-const postChamadosRadar = async () => {
-  getChamados()
-  try {
+ try {
     const dataRadarWk = await axios({
       method: "post",
       url: wkRadarapiUrl,
@@ -84,6 +76,3 @@ const postChamadosRadar = async () => {
     console.log(error)
   }
   // const formataChamado = () => {Object.keys(chamados).forEach()}
-}
-
-postChamadosRadar()

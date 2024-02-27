@@ -7,7 +7,9 @@ const headersCorreios = {
   Key: "ea9fed07a4cfa14a47889ff7a855b12b81fe2523f94bbaf2445bca1f5d9186f1",
   "Content-Type": "application/json",
 }
-
+let os
+let numSerie
+let descricaoTotal
 //const correiosApiUrl =
 //"https://suporte.correios.com.br/gst/api/chamados_novo/lista_chamado/?erp_nu_os=18724442&contrato=000769_2023_001"
 const wkRadarapiUrl =
@@ -26,15 +28,18 @@ const getCorreiosData = async () => {
 
     Object.keys(chamados).forEach(function (item) {
       const chamado = chamados[item]
-      console.log(`Chamado ${item}:`)
+      // console.log(`Chamado ${item}:`)
 
       Object.keys(chamado).forEach(function (propriedade) {
         if (propriedade == "OS") {
-          OS = propriedade
+          os = chamado[propriedade]
+          // console.log(os)
         } else if (propriedade == "DESCRICAO_TOTAL") {
-          descricaoTotal = propriedade
+          descricaoTotal = chamado[propriedade]
+          //console.log(descricaoTotal)
         } else if (propriedade == "N_SERIE") {
-          numSerie = propriedade
+          numSerie = chamado[propriedade]
+          //console.log(numSerie)
         }
       })
     })
@@ -59,18 +64,18 @@ const postChamadosRadarWk = async () => {
           Codigo: null,
           CodigoFilial: "6",
           NumeroAssistencia: null,
-          CodigoCliente: "null",
-          CPF_CNPJ_Cliente: "null",
-          RazaoSocialCliente: "#razaoSocial",
+          CodigoCliente: null,
+          CPF_CNPJ_Cliente: null,
+          RazaoSocialCliente: null,
           DadosClienteAssistencia: null,
           DataAbertura: null,
           HoraAbertura: null,
-          CodigoSituacao: "1",
+          CodigoSituacao: null,
           NomeSituacao: null,
           TipoRegistro: null,
           Equipamentos: [
             {
-              CodigoEquipamento: "#codigoEquip",
+              CodigoEquipamento: null,
               TipoEquipamento: 1,
               NrSerie: numSerie,
               EquipamentoProdutoAssistenciaDefeito: {
@@ -81,7 +86,7 @@ const postChamadosRadarWk = async () => {
           Complemento: {
             Tecnicos: [
               {
-                Codigo: "156",
+                Codigo: null,
               },
             ],
           },
@@ -110,8 +115,8 @@ const postChamadosRadarWk = async () => {
               NomeUsuario: null,
               Contato: "#nomeContato",
               Telefone: "#telefoneContato",
-              RecadoAssistenciaTecnica: "#comentario",
-              Email: "#emailContato",
+              RecadoAssistenciaTecnica: descricaoTotal,
+              Email: null,
             },
           ],
           Atendimentos: null,
@@ -125,5 +130,3 @@ const postChamadosRadarWk = async () => {
   // const formataChamado = () => {Object.keys(chamados).forEach()}
 }
 postChamadosRadarWk()
-
-configRadarWk
